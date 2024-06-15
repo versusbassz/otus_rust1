@@ -37,6 +37,7 @@ fn main() {
 
     println!("tuple_sum: {}", tuple_sum((5, 6)));
     println!("array_sum: {}", array_sum([1, 2, 4]));
+    println!("array_sum: {}", array_sum([2_000_000_000, 2_000_000_000, 2_000_000_000]));
 }
 
 fn double_int32(x: i32) -> i32 {
@@ -68,7 +69,7 @@ fn tuple_sum(t: (i32, i32)) -> i32 {
 }
 
 fn array_sum(arr: [i32; 3]) -> i64 {
-    (arr[0] + arr[1] + arr[2]) as i64
+    (arr[0] as i64) + (arr[1] as i64) + (arr[2] as i64)
 }
 
 fn misc() {
